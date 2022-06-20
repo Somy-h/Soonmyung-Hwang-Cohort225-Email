@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.left-email-menu {
+    background-color: #6B9080;
+}
+
+.middle-email-list {
+    background-color: #F5F5F5;
+}
+
+.right-email-content {
+    background-color: #F5F5F5;
+}
+
+.email-menu-item {
+    color: #fff;
+    list-style: none;
+}
+
+.header-logo {
+    color: #fff;
+    font-family: 'Permanent Marker', cursive;
+    margin: 2rem 0rem 4rem 2rem;
+}
+
+.email-menu-item i {
+    margin : 1rem 1rem 0.5rem 1rem;
+}
