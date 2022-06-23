@@ -15,13 +15,13 @@ body {
 }
 
 .right-email-content {
-    background-color: #F5F5F5;
+    background-color: #fff;
 }
 
 /* Left Part: Email Menu */
-.email-menu-container {
-    /* height: 100%; */
-}
+/* .email-menu-container {
+    height: 100%;
+} */
 
 .email-menu-header-logo {
     font-family: 'Permanent Marker', cursive;
@@ -56,19 +56,48 @@ body {
 .email-list-header {
     background-color: #CCE3DE;
     font-size: 1.2rem;
-    padding: 2rem 1rem 0.8rem 1rem;
+    padding: 1.2rem 1rem 0.5rem 0;
 }
 
 .email-list-search-input {
     background-color: transparent;
     border : 0;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid rgb(29, 27, 27);
     text-align: center;  
     width: 90%; 
 }
 
-.email-list-header-barButton
+.email-list-search-input:focus,
+.email-list-search-input:active {
+    outline: none;
+}
+
+.email-button {
+    background-color: transparent;
+    border: 0;
+    text-align: left;
+}
+
+.email-button:focus {
+    outline: none;
+}
+
+.email-button:hover {
+    background-color: #bae1d8;
+}
+
+.email-button:active {
+    transform: scale(0.92);
+}
+
+.email-list-header-dotButton
 {
+    text-align: center;
+}
+
+.email-list-header-active {
+    background-color: #6B9080;
+    color: #fff;
     text-align: center;
 }
 
@@ -137,12 +166,12 @@ body {
     text-align: center;
 }
 
-
-
 /* Right Part: Email Content */
 
 
-@media (max-width: 1200px) {
+
+
+@media (max-width: 1400px) {
     .offcanvas-end {
         background-color: #6B9080; ;
         position: fixed;
@@ -151,18 +180,17 @@ body {
         width: 75%;
         height: 100%;
         transform: translateX(-200%) !important;
-        transition: transform 0.5s ease-in-out;
     }
 
     .offcanvas-end.collapsing { 
-        /* left: -200%; */
-        /* transition: 0s ease; */
+        transition: transform 0.3s ease;
+    }
+
+    .offcanvas-end.collapse{ 
         transform: translateX(-200%);
     }
 
     .offcanvas-end.show {
-        /* left: 0; */
-        /* transition: 300ms ease-in-out; */
         transform: translate(0) !important;
     }
 }
