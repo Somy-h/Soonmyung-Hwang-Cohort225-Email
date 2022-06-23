@@ -30,7 +30,7 @@ body {
 
 .email-menu-item {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     list-style: none;
     padding: 0.5rem 0.5rem;
 }
@@ -55,7 +55,7 @@ body {
 
 .email-list-header {
     background-color: #CCE3DE;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 1.2rem 1rem 0.5rem 0;
 }
 
@@ -83,7 +83,7 @@ body {
 }
 
 .email-button:hover {
-    background-color: #bae1d8;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .email-button:active {
@@ -132,7 +132,7 @@ body {
 }
 
 .email-list-item-from-icon {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .email-list-item-subject-container {
@@ -162,14 +162,25 @@ body {
     /* position: fixed; */
     bottom: 0;
     background-color: #CCE3DE;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
 /* Right Part: Email Content */
 
+.email-content-subject {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
 
+.email-content-fromTo {
+    display: flex;
+    flex-direction: column;
+}
 
+.email-content-receivedTime {
+    font-size: 0.8rem;
+}
 
 @media (max-width: 1400px) {
     .offcanvas-end {
