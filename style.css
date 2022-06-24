@@ -1,17 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root {
+    --main-background-color: #6B9080;
+    --second-background-color: #CCE3DE;
+    --active-background-color: #e5e1eb;
+    --hover-background-color: #EAF4F4;
+    --read-background-color: #FCFAFA;
+}
 
 body {
+    background-color: var(--main-background-color);
     font-family: 'Roboto', sans-serif;
 }
 
 .left-email-menu {
-    background-color: #6B9080;
+    background-color: var(--main-background-color);
     max-width: 400px;
     height: 100vh;
 }
 
 .middle-email-list {
-    background-color: #F5F5F5;
+    background-color: #fff;
 }
 
 .right-email-content {
@@ -19,13 +27,28 @@ body {
 }
 
 /* Left Part: Email Menu */
-/* .email-menu-container {
-    height: 100%;
-} */
+.email-menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .email-menu-header-logo {
-    font-family: 'Permanent Marker', cursive;
+    color: var(--hover-background-color);
     margin: 2rem 0rem 4rem 2rem;
+}
+
+.ComposeBtn {
+    border: 0 ;
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.1);
+    padding: 1rem 4rem;
+    margin-bottom: 3rem;
+}
+
+.email-menu {
+    width: 100%;
+    max-width: 360px;
 }
 
 .email-menu-item {
@@ -36,25 +59,24 @@ body {
 }
 
 .email-menu-item.active {
-    background-color: #CCE3DE;
+    background-color: var(--active-background-color);
     color: #000;
 }
 
 .email-menu-item:hover {
-    background-color: #EAF4F4;
+    background-color: var(--hover-background-color);
     color: #000;
 }
 
 .email-menu-item i {
-    margin : 1rem 1rem 0.5rem 1rem;
+    margin : 0.6rem 1rem 0.6rem 1rem;
 }
 
 /* Middle Part: Email List */
 
 /* -- Middle Part: Email List Header */
-
 .email-list-header {
-    background-color: #CCE3DE;
+    background-color: var(--second-background-color);
     font-size: 1.1rem;
     padding: 1.2rem 1rem 0.5rem 0;
 }
@@ -62,7 +84,7 @@ body {
 .email-list-search-input {
     background-color: transparent;
     border : 0;
-    border-bottom: 1px solid rgb(29, 27, 27);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     text-align: center;  
     width: 90%; 
 }
@@ -96,15 +118,14 @@ body {
 }
 
 .email-list-header-active {
-    background-color: #6B9080;
+    background-color: var(--main-background-color);
     color: #fff;
     text-align: center;
 }
 
 /* -- Middle Part: Email List Items */
-
 .email-list-content {
-     overflow-y: scroll;
+    overflow-y: scroll;
 }
 
 .email-list-item-container{
@@ -113,17 +134,20 @@ body {
 }
 
 .email-list-item-container.unread{
-    background-color: #EAF4F4;
+    background-color: var(--hover-background-color);
 }
 
 .email-list-item-container.read{
-    background-color: #FCFAFA;
-
+    background-color: var(--read-background-color);
 }
 
-.email-list-item-container.selected,
+.email-list-item-container.selected
+{
+    background-color: var(--active-background-color);
+}
+
 .email-list-item-container:hover {
-    background-color: #CCE3DE;
+    background-color: var(--active-background-color);
 }
 
 .iconBtn {
@@ -161,7 +185,7 @@ body {
 .email-list-footer {
     /* position: fixed; */
     bottom: 0;
-    background-color: #CCE3DE;
+    background-color: var(--second-background-color);
     font-size: 1.2rem;
     text-align: center;
 }
@@ -180,28 +204,4 @@ body {
 
 .email-content-receivedTime {
     font-size: 0.8rem;
-}
-
-@media (max-width: 1400px) {
-    .offcanvas-end {
-        background-color: #6B9080; ;
-        position: fixed;
-        top: 50px;
-        left: 0;
-        width: 75%;
-        height: 100%;
-        transform: translateX(-200%) !important;
-    }
-
-    .offcanvas-end.collapsing { 
-        transition: transform 0.3s ease;
-    }
-
-    .offcanvas-end.collapse{ 
-        transform: translateX(-200%);
-    }
-
-    .offcanvas-end.show {
-        transform: translate(0) !important;
-    }
 }
