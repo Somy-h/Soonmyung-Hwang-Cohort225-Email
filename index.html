@@ -54,16 +54,26 @@
                             <input type="text" class="email-list-search-input" placeholder="search">
                         </div>
                         <button class="col-1 email-button" id="email-list-header-searchBtn"><i class="fas fa-search"></i></button>
-                        <button class="col-1 email-button" id="email-list-header-dotButton"><i class="fas fa-ellipsis"></i></button>
+                        <!-- <button class="col-1 email-button" id="email-list-header-dotButton"><i class="fas fa-ellipsis"></i></button> -->
+                        <div class="col-1 dropdown-center">
+                            <button class="email-button" type="button" data-bs-toggle="dropdown" id="email-search-menu" aria-controls="email-search-menu" aria-expanded="false">
+                                <i class="fas fa-ellipsis"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="dropdown-item" href="#">All</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Read</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Unread</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Starred</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Unstarred</a></li>
+                            </ul>
+                        </div>
                     </div>  
                     <div class="row">
                         <div class="d-xxl-none col-xl-12 email-list-header-active">
                             <span class="email-active-item">Inbox</span>
                         </div>
-                        <div class="d-none d-xxl-block col-xxl-12 email-list-header-active">
-                            <span>
-                                <input class="form-check-input flex-shrink-0" id="email-list-checkAllbtn" type="checkbox" value="" checked style="font-size: 1rem;">
-                            </span>
+                        <div class="d-none d-xxl-block col-xxl-12 email-list-header-active" style="height:1rem">
+                            <!-- <span></span> -->
                         </div>
                     </div>                          
                     <!-- Email List Items-->
@@ -390,13 +400,22 @@
                             <button class="email-button" id="email-replay"> <i class="fas fa-reply"></i></button>
                         </div>
                         <div class="col-1">
-                            <button class="email-button" id="email-replay"> <i class="far fa-trash-can"></i></button>
+                            <button class="email-button" id="email-delete"> <i class="far fa-trash-can"></i></button>
                         </div>
                         <div class="col-1">
-                            <button class="email-button" id="email-replay"> <i class="fas fa-circle-exclamation"></i></button>
+                            <button class="email-button" id="email-spam"> <i class="fas fa-circle-exclamation"></i></button>
                         </div>
-                        <div class="col-1">
-                            <button class="email-button" id="email-replay"> <i class="fas fa-ellipsis"></i></button>
+                        <div class="col-1 dropdown-center">
+                            <button class="email-button" type="button" data-bs-toggle="dropdown" id="email-content-meatball" aria-controls="email-content-tools" aria-expanded="false">
+                                <i class="fas fa-ellipsis"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="dropdown-item" href="#">Forward</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Move</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Star</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Mark as Unread</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Print</a></li>
+                            </ul>
                         </div>                        
                     </div>
                     <div class="row">
