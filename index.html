@@ -13,22 +13,22 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Left Part: Email Menu -->
-            <div class="d-none d-xxl-block col-xxl-3 left-email-menu">
-                <div class="email-menu-container">
-                    <h3 class="email-menu-header-logo"></h3>
-                    <button class="email-button ComposeBtn" style="background-color: #ffae6e;">COMPOSE</button>
-                    <ul class="email-menu">
-                        <li class="email-menu-item active"><i class="far fa-envelope-open"></i> Inbox(5)</li>
-                        <li class="email-menu-item"><i class="fa-regular fa-paper-plane"></i> Sent</li>
-                        <li class="email-menu-item"><i class="fa-regular fa-pen-to-square"></i> Drafts</li>
-                        <li class="email-menu-item"><i class="fa-regular fa-bell-slash"></i> Spam</li>
-                        <li class="email-menu-item"><i class="fa-regular fa-trash-can"></i> Trash</li>
+            <div class="d-none d-xxl-block col-xxl-3 left-container">
+                <div class="menu-container">
+                    <h3 class="menu-header-logo"></h3>
+                    <button class="email-button btn-compose">COMPOSE</button>
+                    <ul class="menu">
+                        <li class="menu-item active"><i class="far fa-envelope-open"></i> Inbox(5)</li>
+                        <li class="menu-item"><i class="fa-regular fa-paper-plane"></i> Sent</li>
+                        <li class="menu-item"><i class="fa-regular fa-pen-to-square"></i> Drafts</li>
+                        <li class="menu-item"><i class="fa-regular fa-bell-slash"></i> Spam</li>
+                        <li class="menu-item"><i class="fa-regular fa-trash-can"></i> Trash</li>
                     </ul>
                 </div>
             </div>
             <!-- Middle Part: Email List -->
-            <div class="col-12 col-lg-5 col-xxl-4 middle-email-list">
-                <div class="container-fluid p-0 email-list-container">
+            <div class="col-lg-5 col-xxl-4 middle-container">
+                <div class="container-fluid p-0">
                     <!-- Email List Header-->
                     <div class="row align-items-start email-list-header">
                         <div class="d-xxl-none col-2">
@@ -36,27 +36,26 @@
                                 <button class="navbar-toggler email-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#off-menu" aria-controls="off-menu">
                                     <i class="fas fa-bars"></i>
                                 </button>
-                                <div class="offcanvas offcanvas-start left-email-menu" tabindex="-1" id="off-menu" aria-labelledby="off-menu">
+                                <div class="offcanvas offcanvas-start menu" tabindex="-1" id="off-menu" aria-labelledby="off-menu">
                                     <div class="offcanvas-body">
                                         <button type="button" class="btn-close btn-close-white email-button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                        <ul class="email-menu">
-                                            <li class="email-menu-item"><i class="far fa-envelope-open"></i> Inbox(5)</li>
-                                            <li class="email-menu-item"><i class="fa-regular fa-paper-plane"></i> Sent</li>
-                                            <li class="email-menu-item"><i class="fa-regular fa-pen-to-square"></i> Drafts</li>
-                                            <li class="email-menu-item"><i class="fa-regular fa-bell-slash"></i> Spam</li>
-                                            <li class="email-menu-item"><i class="fa-regular fa-trash-can"></i> Trash</li>
+                                        <ul class="menu">
+                                            <li class="menu-item"><i class="far fa-envelope-open"></i> Inbox(5)</li>
+                                            <li class="menu-item"><i class="fa-regular fa-paper-plane"></i> Sent</li>
+                                            <li class="menu-item"><i class="fa-regular fa-pen-to-square"></i> Drafts</li>
+                                            <li class="menu-item"><i class="fa-regular fa-bell-slash"></i> Spam</li>
+                                            <li class="menu-item"><i class="fa-regular fa-trash-can"></i> Trash</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-8 col-xxl-10 email-list-header-search text-end">
-                            <input type="text" class="email-list-search-input" placeholder="search">
+                        <div class="col-8 col-xxl-10 text-end">
+                            <input type="text" class="search-input" placeholder="search">
                         </div>
-                        <button class="col-1 email-button" id="email-list-header-searchBtn"><i class="fas fa-search"></i></button>
-                        <!-- <button class="col-1 email-button" id="email-list-header-dotButton"><i class="fas fa-ellipsis"></i></button> -->
+                        <button class="col-1 email-button"><i class="fas fa-search"></i></button>
                         <div class="col-1 dropdown-center">
-                            <button class="email-button" type="button" data-bs-toggle="dropdown" id="email-search-menu" aria-controls="email-search-menu" aria-expanded="false">
+                            <button class="email-button" type="button" data-bs-toggle="dropdown" aria-controls="email-search-menu" aria-expanded="false">
                                 <i class="fas fa-ellipsis"></i>
                             </button>
                             <ul class="dropdown-menu">
@@ -69,344 +68,344 @@
                         </div>
                     </div>  
                     <div class="row">
-                        <div class="d-xxl-none col-xl-12 email-list-header-active">
-                            <span class="email-active-item">Inbox</span>
+                        <div class="d-xxl-none col-xl-12 selectedmenu">
+                            <span>Inbox</span>
                         </div>
-                        <div class="d-none d-xxl-block col-xxl-12 email-list-header-active" style="height:1rem">
+                        <div class="d-none d-xxl-block col-xxl-12 selectedmenu">
                             <!-- <span></span> -->
                         </div>
                     </div>                          
                     <!-- Email List Items-->
-                    <div class="row email-list-items-container">
-                        <div class="container-fluid p-0 email-list-content">
-                            <div class="row p-2 email-list-item-container unread selected">
+                    <div class="row">
+                        <div class="container-fluid p-0">
+                            <div class="row p-2 item-container unread selected">
                                 <div class="col-1 align-self-center">
-                                    <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked style="font-size: 1rem;">
+                                    <input class="flex-shrink-0" type="checkbox" value="" checked style="font-size: 1rem;">
                                 </div>
                                 <div class="col-2 align-self-center">
-                                    <i class="fab fa-amazon email-list-item-from-icon"></i>
+                                    <i class="fab fa-amazon icon-item-from"></i>
                                 </div>
                                 <div class="col-6">
-                                    <div class="email-list-item-subject-container">
-                                        <span class="email-list-item-from">Amazon.com</span>
-                                        <span class="email-list-item-subject">Your Order # is 1234567</span>
+                                    <div class="item-column-container">
+                                        <span class="email-from">Amazon.com</span>
+                                        <span class="email-subject">Your Order # is 1234567</span>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="email-list-item-date-container">
-                                        <span class="email-list-item-receivedTime">9:40 AM</span>
-                                        <button class="iconBtn email-list-item-star"><i class="far fa-star"></i></button>
+                                    <div class="item-column-container align-center">
+                                        <span>9:40 AM</span>
+                                        <button class="btn-icon"><i class="far fa-star"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-2 email-list-item-container unread">
+                            <div class="row p-2 item-container unread">
                                 <div class="col-1 align-self-center">
-                                    <input class="form-check-input flex-shrink-0" type="checkbox" value="">
+                                    <input class=" flex-shrink-0" type="checkbox" value="">
                                 </div>
                                 <div class="col-2 align-self-center">
-                                    <i class="fab fa-paypal email-list-item-from-icon"></i>
+                                    <i class="fab fa-paypal icon-item-from"></i>
                                 </div>
                                 <div class="col-6">
-                                    <div class="email-list-item-subject-container">
-                                        <span class="email-list-item-from">Paypal.com</span>
-                                        <span class="email-list-item-subject">Your Order # is 1234567</span>
+                                    <div class="item-column-container">
+                                        <span class="email-from">Paypal.com</span>
+                                        <span class="email-subject">Your Order # is 1234567</span>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="email-list-item-date-container">
+                                    <div class="item-column-container align-center">
                                         <span class="email-list-item-receivedTime">1:40 AM</span>
-                                        <button class="iconBtn email-list-item-star"><i class="far fa-star"></i></button>
+                                        <button class="btn-icon"><i class="far fa-star"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-2 email-list-item-container unread">
+                            <div class="row p-2 item-container unread">
                                 <div class="col-1 align-self-center">
-                                    <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked>
+                                    <input class=" flex-shrink-0" type="checkbox" value="" checked>
                                 </div>
                                 <div class="col-2 align-self-center">
-                                    <i class="fab fa-pinterest email-list-item-from-icon"></i>
+                                    <i class="fab fa-pinterest icon-item-from"></i>
                                 </div>
                                 <div class="col-6">
-                                    <div class="email-list-item-subject-container">
-                                        <span class="email-list-item-from">Pinterest.com</span>
-                                        <span class="email-list-item-subject">Check out your favoriates</span>
+                                    <div class="item-column-container">
+                                        <span class="email-from">Pinterest.com</span>
+                                        <span class="email-subject">Check out your favorites</span>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="email-list-item-date-container">
+                                    <div class="item-column-container align-center">
                                         <span class="email-list-item-receivedTime">1:40 AM</span>
-                                        <button class="iconBtn email-list-item-star"><i class="far fa-star"></i></button>
+                                        <button class="btn-icon"><i class="far fa-star"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-2 email-list-item-container unread">
+                            <div class="row p-2 item-container unread">
                                 <div class="col-1 align-self-center">
-                                    <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked>
+                                    <input class=" flex-shrink-0" type="checkbox" value="" checked>
                                 </div>
                                 <div class="col-2 align-self-center">
-                                    <i class="fab fa-linkedin email-list-item-from-icon"></i>
+                                    <i class="fab fa-linkedin icon-item-from"></i>
                                 </div>
                                 <div class="col-6">
-                                    <div class="email-list-item-subject-container">
-                                        <span class="email-list-item-from">LinkedIn.com</span>
-                                        <span class="email-list-item-subject">Bay Valley Tech - Free Code Academy and others share</span>
+                                    <div class="item-column-container">
+                                        <span class="email-from">LinkedIn.com</span>
+                                        <span class="email-subject">Bay Valley Tech - Free Code Academy and others share</span>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="email-list-item-date-container">
-                                        <span class="email-list-item-receivedTime">6/18/22</span>
-                                        <button class="iconBtn email-list-item-star"><i class="far fa-star"></i></button>
+                                    <div class="item-column-container align-center">
+                                        <span>6/18/22</span>
+                                        <button class="btn-icon"><i class="far fa-star"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-2 email-list-item-container unread">
+                            <div class="row p-2 item-container unread">
                                 <div class="col-1 align-self-center">
-                                    <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked>
+                                    <input class=" flex-shrink-0" type="checkbox" value="" checked>
                                 </div>
                                 <div class="col-2 align-self-center">
-                                    <i class="fab fa-google email-list-item-from-icon"></i>
+                                    <i class="fab fa-google icon-item-from"></i>
                                 </div>
                                 <div class="col-6">
-                                    <div class="email-list-item-subject-container">
-                                        <span class="email-list-item-from">Google.com</span>
-                                        <span class="email-list-item-subject">Security Alert</span>
+                                    <div class="item-column-container">
+                                        <span class="email-from">Google.com</span>
+                                        <span class="email-subject">Security Alert</span>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="email-list-item-date-container">
-                                        <span class="email-list-item-receivedTime">6/18/22</span>
-                                        <button class="iconBtn email-list-item-star"><i class="far fa-star"></i></button>
+                                    <div class="item-column-container align-center">
+                                        <span>6/18/22</span>
+                                        <button class="btn-icon"><i class="far fa-star"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-2 email-list-item-container read">
+                            <div class="row p-2 item-container read">
                                 <div class="col-1 align-self-center">
-                                    <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked>
+                                    <input class=" flex-shrink-0" type="checkbox" value="" checked>
                                 </div>
                                 <div class="col-2 align-self-center">
-                                    <i class="fab fa-amazon email-list-item-from-icon"></i>
+                                    <i class="fab fa-amazon icon-item-from"></i>
                                 </div>
                                 <div class="col-6">
-                                    <div class="email-list-item-subject-container">
-                                        <span class="email-list-item-from">Amazon.com</span>
-                                        <span class="email-list-item-subject">Your Order # is 1234567</span>
+                                    <div class="item-column-container">
+                                        <span class="email-from">Amazon.com</span>
+                                        <span class="email-subject">Your Order # is 1234567</span>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="email-list-item-date-container">
-                                        <span class="email-list-item-receivedTime">9:40 AM</span>
-                                        <button class="iconBtn email-list-item-star"><i class="far fa-star"></i></button>
+                                    <div class="item-column-container align-center">
+                                        <span>6/18/22</span>
+                                        <button class="btn-icon"><i class="far fa-star"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-2 email-list-item-container read">
+                            <div class="row p-2 item-container read">
                                 <div class="col-1 align-self-center">
-                                    <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked>
+                                    <input class=" flex-shrink-0" type="checkbox" value="" checked>
                                 </div>
                                 <div class="col-2 align-self-center">
-                                    <i class="fab fa-paypal email-list-item-from-icon"></i>
+                                    <i class="fab fa-paypal icon-item-from"></i>
                                 </div>
                                 <div class="col-6">
-                                    <div class="email-list-item-subject-container">
-                                        <span class="email-list-item-from">Paypal.com</span>
-                                        <span class="email-list-item-subject">Your Order # is 1234567</span>
+                                    <div class="item-column-container">
+                                        <span class="email-from">Paypal.com</span>
+                                        <span class="email-subject">Your Order # is 1234567</span>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="email-list-item-date-container">
-                                        <span class="email-list-item-receivedTime">1:40 AM</span>
-                                        <button class="iconBtn email-list-item-star"><i class="far fa-star"></i></button>
+                                    <div class="item-column-container align-center">
+                                        <span>6/18/22</span>
+                                        <button class="btn-icon"><i class="far fa-star"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-2 email-list-item-container read">
+                            <div class="row p-2 item-container read">
                                 <div class="col-1 align-self-center">
-                                    <input class="form-check-input flex-shrink-0" type="checkbox" value="">
+                                    <input class=" flex-shrink-0" type="checkbox" value="">
                                 </div>
                                 <div class="col-2 align-self-center">
-                                    <i class="fab fa-pinterest email-list-item-from-icon"></i>
+                                    <i class="fab fa-pinterest icon-item-from"></i>
                                 </div>
                                 <div class="col-6">
-                                    <div class="email-list-item-subject-container">
-                                        <span class="email-list-item-from">Pinterest.com</span>
-                                        <span class="email-list-item-subject">Check out your favoriates</span>
+                                    <div class="item-column-container">
+                                        <span class="email-from">Pinterest.com</span>
+                                        <span class="email-subject">Check out your favoriates</span>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="email-list-item-date-container">
-                                        <span class="email-list-item-receivedTime">1:40 AM</span>
-                                        <button class="iconBtn email-list-item-star"><i class="far fa-star"></i></button>
+                                    <div class="item-column-container align-center">
+                                        <span>6/18/22</span>
+                                        <button class="btn-icon"><i class="far fa-star"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-2 email-list-item-container read">
+                            <div class="row p-2 item-container read">
                                 <div class="col-1 align-self-center">
-                                    <input class="form-check-input flex-shrink-0" type="checkbox" value="">
+                                    <input class=" flex-shrink-0" type="checkbox" value="">
                                 </div>
                                 <div class="col-2 align-self-center">
-                                    <i class="fab fa-linkedin email-list-item-from-icon"></i>
+                                    <i class="fab fa-linkedin icon-item-from"></i>
                                 </div>
                                 <div class="col-6">
-                                    <div class="email-list-item-subject-container">
-                                        <span class="email-list-item-from">LinkedIn.com</span>
-                                        <span class="email-list-item-subject">Bay Valley Tech - Free Code Academy and others share</span>
+                                    <div class="item-column-container">
+                                        <span class="email-from">LinkedIn.com</span>
+                                        <span class="email-subject">Bay Valley Tech - Free Code Academy and others share</span>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="email-list-item-date-container">
-                                        <span class="email-list-item-receivedTime">6/18/22</span>
-                                        <button class="iconBtn email-list-item-star"><i class="far fa-star"></i></button>
+                                    <div class="item-column-container align-center">
+                                        <span>6/18/22</span>
+                                        <button class="btn-icon"><i class="far fa-star"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-2 email-list-item-container read">
+                            <div class="row p-2 item-container read">
                                 <div class="col-1 align-self-center">
-                                    <input class="form-check-input flex-shrink-0" type="checkbox" value="">
+                                    <input class=" flex-shrink-0" type="checkbox" value="">
                                 </div>
                                 <div class="col-2 align-self-center">
-                                    <i class="fab fa-linkedin email-list-item-from-icon"></i>
+                                    <i class="fab fa-linkedin icon-item-from"></i>
                                 </div>
                                 <div class="col-6">
-                                    <div class="email-list-item-subject-container">
-                                        <span class="email-list-item-from">LinkedIn.com</span>
-                                        <span class="email-list-item-subject">Bay Valley Tech - Free Code Academy and others share</span>
+                                    <div class="item-column-container">
+                                        <span class="email-from">LinkedIn.com</span>
+                                        <span class="email-subject">Bay Valley Tech - Free Code Academy and others share</span>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="email-list-item-date-container">
-                                        <span class="email-list-item-receivedTime">6/18/22</span>
-                                        <button class="iconBtn email-list-item-star"><i class="far fa-star"></i></button>
+                                    <div class="item-column-container align-center">
+                                        <span>6/18/22</span>
+                                        <button class="btn-icon"><i class="far fa-star"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-2 email-list-item-container read">
+                            <div class="row p-2 item-container read">
                                 <div class="col-1 align-self-center">
-                                    <input class="form-check-input flex-shrink-0" type="checkbox" value="">
+                                    <input class=" flex-shrink-0" type="checkbox" value="">
                                 </div>
                                 <div class="col-2 align-self-center">
-                                    <i class="fab fa-linkedin email-list-item-from-icon"></i>
+                                    <i class="fab fa-linkedin icon-item-from"></i>
                                 </div>
                                 <div class="col-6">
-                                    <div class="email-list-item-subject-container">
-                                        <span class="email-list-item-from">LinkedIn.com</span>
-                                        <span class="email-list-item-subject">Bay Valley Tech - Free Code Academy and others share</span>
+                                    <div class="item-column-container">
+                                        <span class="email-from">LinkedIn.com</span>
+                                        <span class="email-subject">Bay Valley Tech - Free Code Academy and others share</span>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="email-list-item-date-container">
-                                        <span class="email-list-item-receivedTime">6/18/22</span>
-                                        <button class="iconBtn email-list-item-star"><i class="far fa-star"></i></button>
+                                    <div class="item-column-container align-center">
+                                        <span>6/18/22</span>
+                                        <button class="btn-icon"><i class="far fa-star"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-2 email-list-item-container read">
+                            <div class="row p-2 item-container read">
                                 <div class="col-1 align-self-center">
-                                    <input class="form-check-input flex-shrink-0" type="checkbox" value="">
+                                    <input class=" flex-shrink-0" type="checkbox" value="">
                                 </div>
                                 <div class="col-2 align-self-center">
-                                    <i class="fab fa-pinterest email-list-item-from-icon"></i>
+                                    <i class="fab fa-pinterest icon-item-from"></i>
                                 </div>
                                 <div class="col-6">
-                                    <div class="email-list-item-subject-container">
-                                        <span class="email-list-item-from">Pinterest.com</span>
-                                        <span class="email-list-item-subject">Check out your favoriates</span>
+                                    <div class="item-column-container">
+                                        <span class="email-from">Pinterest.com</span>
+                                        <span class="email-subject">Check out your favoriates</span>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="email-list-item-date-container">
-                                        <span class="email-list-item-receivedTime">1:40 AM</span>
-                                        <button class="iconBtn email-list-item-star"><i class="far fa-star"></i></button>
+                                    <div class="item-column-container align-center">
+                                        <span>6/18/22</span>
+                                        <button class="btn-icon"><i class="far fa-star"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-2 email-list-item-container read">
+                            <div class="row p-2 item-container read">
                                 <div class="col-1 align-self-center">
-                                    <input class="form-check-input flex-shrink-0" type="checkbox" value="">
+                                    <input class=" flex-shrink-0" type="checkbox" value="">
                                 </div>
                                 <div class="col-2 align-self-center">
-                                    <i class="fab fa-linkedin email-list-item-from-icon"></i>
+                                    <i class="fab fa-linkedin icon-item-from"></i>
                                 </div>
                                 <div class="col-6">
-                                    <div class="email-list-item-subject-container">
-                                        <span class="email-list-item-from">LinkedIn.com</span>
-                                        <span class="email-list-item-subject">Bay Valley Tech - Free Code Academy and others share</span>
+                                    <div class="item-column-container">
+                                        <span class="email-from">LinkedIn.com</span>
+                                        <span class="email-subject">Bay Valley Tech - Free Code Academy and others share</span>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="email-list-item-date-container">
-                                        <span class="email-list-item-receivedTime">6/18/22</span>
-                                        <button class="iconBtn email-list-item-star"><i class="far fa-star"></i></button>
+                                    <div class="item-column-container align-center">
+                                        <span>6/18/22</span>
+                                        <button class="btn-icon"><i class="far fa-star"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-2 email-list-item-container read">
+                            <div class="row p-2 item-container read">
                                 <div class="col-1 align-self-center">
-                                    <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked>
+                                    <input class=" flex-shrink-0" type="checkbox" value="" checked>
                                 </div>
                                 <div class="col-2 align-self-center">
-                                    <i class="fab fa-linkedin email-list-item-from-icon"></i>
+                                    <i class="fab fa-linkedin icon-item-from"></i>
                                 </div>
                                 <div class="col-6">
-                                    <div class="email-list-item-subject-container">
-                                        <span class="email-list-item-from">LinkedIn.com</span>
-                                        <span class="email-list-item-subject">Bay Valley Tech - Free Code Academy and others share</span>
+                                    <div class="item-column-container">
+                                        <span class="email-from">LinkedIn.com</span>
+                                        <span class="email-subject">Bay Valley Tech - Free Code Academy and others share</span>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="email-list-item-date-container">
-                                        <span class="email-list-item-receivedTime">6/18/22</span>
-                                        <button class="iconBtn email-list-item-star"><i class="far fa-star"></i></button>
+                                    <div class="item-column-container align-center">
+                                        <span>6/18/22</span>
+                                        <button class="btn-icon"><i class="far fa-star"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row p-2 email-list-item-container read">
+                            <div class="row p-2 item-container read">
                                 <div class="col-1 align-self-center">
-                                    <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked>
+                                    <input class=" flex-shrink-0" type="checkbox" value="" checked>
                                 </div>
                                 <div class="col-2 align-self-center">
-                                    <i class="fab fa-linkedin email-list-item-from-icon"></i>
+                                    <i class="fab fa-linkedin icon-item-from"></i>
                                 </div>
                                 <div class="col-6">
-                                    <div class="email-list-item-subject-container">
-                                        <span class="email-list-item-from">LinkedIn.com</span>
-                                        <span class="email-list-item-subject">Bay Valley Tech - Free Code Academy and others share</span>
+                                    <div class="item-column-container">
+                                        <span class="email-from">LinkedIn.com</span>
+                                        <span class="email-subject">Bay Valley Tech - Free Code Academy and others share</span>
                                     </div>
                                 </div>
                                 <div class="col-3">
-                                    <div class="email-list-item-date-container">
-                                        <span class="email-list-item-receivedTime">6/18/22</span>
-                                        <button class="iconBtn email-list-item-star"><i class="far fa-star"></i></button>
+                                    <div class="item-column-container align-center">
+                                        <span>6/18/22</span>
+                                        <button class="btn-icon"><i class="far fa-star"></i></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Email List Footer-->
-                    <div class="d-xxl-none row align-items-end position-sticky email-list-footer p-3 row justify-content-evenly">
+                    <div class="d-xxl-none row position-sticky p-3 justify-content-evenly email-list-footer">
                         <div class="col-3">
-                            <button class="email-button" id="email-list-composeBtn"><i class="far fa-edit"></i></button>
+                            <button class="email-button"><i class="far fa-edit"></i></button>
                         </div>
                         <div class="col-3">
-                            <button class="email-button" id="email-list-trash"><i class="far fa-trash-can"></i></button>
+                            <button class="email-button"><i class="far fa-trash-can"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Right Part: Email  Content -->
-            <div class="d-none d-lg-block col-lg-7 col-xxl-5 right-email-content">
+            <div class="d-none d-lg-block col-lg-7 col-xxl-5 right-container">
                 <div class="container-fluid">
                     <div class="row justify-content-end email-content-tools p-4">
                         <div class="col-1">
-                            <button class="email-button" id="email-replay"> <i class="fas fa-reply"></i></button>
+                            <button class="email-button"> <i class="fas fa-reply"></i></button>
                         </div>
                         <div class="col-1">
-                            <button class="email-button" id="email-delete"> <i class="far fa-trash-can"></i></button>
+                            <button class="email-button"> <i class="far fa-trash-can"></i></button>
                         </div>
                         <div class="col-1">
-                            <button class="email-button" id="email-spam"> <i class="fas fa-circle-exclamation"></i></button>
+                            <button class="email-button"> <i class="fas fa-circle-exclamation"></i></button>
                         </div>
                         <div class="col-1 dropdown-center">
-                            <button class="email-button" type="button" data-bs-toggle="dropdown" id="email-content-meatball" aria-controls="email-content-tools" aria-expanded="false">
+                            <button class="email-button" type="button" data-bs-toggle="dropdown" aria-controls="email-content-tools" aria-expanded="false">
                                 <i class="fas fa-ellipsis"></i>
                             </button>
                             <ul class="dropdown-menu">
@@ -425,16 +424,16 @@
                     </div>
                     <div class="row p-3">
                         <div class="col-1 align-self-center">
-                            <i class="fab fa-amazon email-list-item-from-icon"></i>
+                            <i class="fab fa-amazon icon-item-from"></i>
                         </div>
                         <div class="col-8">
-                            <div class="email-content-fromTo">
-                                <span class="email-content-from">From: Amazon.com</span>
-                                <span class="email-content-to">To: soonmyung.hwang.cohort225@gmail.com</span>
+                            <div class="item-column-container">
+                                <span>From: Amazon.com</span>
+                                <span>To: soonmyung.hwang.cohort225@gmail.com</span>
                             </div>
                         </div>
                         <div class="col-3">
-                            <span class="email-content-receivedTime">6/18/22 8:57 AM</span>
+                            <span>6/18/22 8:57 AM</span>
                         </div>
                     </div>
                     <div class="row p-5">
