@@ -111,10 +111,10 @@ body {
     outline: none;
 }
 
-.selectedmenu {
+.selected-menu {
     background-color: var(--main-background-color);
     color: #fff;
-    height: 1.5rem;
+    height: 1.7rem;
     padding-left: 1.5rem;
 }
 
